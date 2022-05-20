@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navfirst {
+    margin-left: 552px;
+
+}
+
+.iconsedit {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.iconbag {
+    margin-left: 10px;
+}
+
+
+.fundo01 {
+    background: linear-gradient(103.7deg, #DE5D00 -22.35%, #5F2800 -0.19%, #000000 26.26%, #000000 52.71%, #000000 77.73%, #301400 98.46%, #FF6B00 114.91%);
+    border-radius: 5px;
+    width: 100vw;
+    height: 70vh;
+    margin-top: -18px;
+}
+
+.h2-fundo01 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 75px;
+    color: #FFFFFF;
+}
