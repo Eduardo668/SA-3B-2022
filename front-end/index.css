@@ -24,12 +24,33 @@
     border-radius: 5px;
     width: 100vw;
     height: 70vh;
+    position: absolute;
     margin-top: -18px;
 }
 
-.h2-fundo01 {
+.h2text {
+    font-weight: 700;
     font-weight: 700;
     font-size: 48px;
     line-height: 75px;
+    color: white;
+    position: relative;
+    margin-top: 133px;
+    margin-left: 120px;
+    width: 470px;
+    height: 129px;
+}
+
+.ptxt{
+    width: 508px;
+    height: 90px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
     color: #FFFFFF;
+    margin: 170px 0 0 120px;
+}
+
+#buttonComprarAgora{
+    margin: 30px 0 0 120px;
 }
