@@ -32,7 +32,7 @@ public class AdminUserController {
 
         String admExists = "";
         for (AdminUser adminUser : adminService.findAll()){
-            if (admin.getAdmUsername().equals(adminUser.getAdmUsername())
+            if (adminUser.getAdmUsername().equals(admin.getAdmUsername())
                     && passwordVerification){
                  admExists = "True";
             }
