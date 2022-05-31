@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AdminUserController {
 
     @Autowired
@@ -27,20 +27,26 @@ public class AdminUserController {
     private Argon2PasswordEncoder encoder;
 
     @PostMapping("/login")
-    public ResponseEntity<String> adminUser(@ModelAttribute AdminUser admin){
-        var passwordVerification  = encoder.matches(admin.getPassword(), admin.getPassword());
+    public ResponseEntity<String> adminUser(@RequestBody AdminUser admin){
 
-        String admExists = "";
+        System.out.println(admin);
+        boolean admExists = false;
         for (AdminUser adminUser : adminService.findAll()){
+            var passwordVerification  = encoder.matches(admin.getPassword(), adminUser.getPassword());
             if (adminUser.getAdmUsername().equals(admin.getAdmUsername())
                     && passwordVerification){
-                 admExists = "True";
-            }
-            else{
-                admExists = "False";
+                 admExists = true;
             }
         }
-        return new ResponseEntity<>(admExists, HttpStatus.OK);
+        String admConfirmation = "";
+        if (admExists){
+           admConfirmation = "true";
+        }
+        else{
+            admConfirmation = "false";
+        }
+        return new ResponseEntity<>(admConfirmation, HttpStatus.OK);
+
     }
 
     @GetMapping("/listAdms")

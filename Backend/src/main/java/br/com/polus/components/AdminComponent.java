@@ -47,7 +47,7 @@ public class AdminComponent implements CommandLineRunner {
 //        adminService.saveAdm(thiago_adm);
 //        adminService.saveAdm(christian_adm);
 //        adminService.saveAdm(andre_adm);
-
+//
 
 
 

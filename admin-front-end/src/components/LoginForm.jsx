@@ -1,11 +1,11 @@
 import { useState } from "react";
 import './css/loginForm.css'
 
-const LoginForm = ()=>{
+const LoginForm = ({ verifyAccount })=>{
    
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
-
+    
 
     return (
         <>
@@ -15,7 +15,8 @@ const LoginForm = ()=>{
                <input className="input_name" placeholder="Username" onChange={(e)=>setName(e.target.value)} type="text"/>
                <input className="input_password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} type="password"/>
            </div>
-           <button className="btn_login"> <p className="btn_title">Entrar</p></button>
+           <button onClick={()=>{verifyAccount(name, password)}} className="btn_login"> <p className="btn_title">Entrar</p></button>
+           
         </div>
         </>
     )
