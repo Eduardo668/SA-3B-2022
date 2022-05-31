@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin/addSkin")
 public class AddSkinsController {
 
-    @PostMapping("/adicionarSkin")
-    public ResponseEntity<>
+
 
 
 }
