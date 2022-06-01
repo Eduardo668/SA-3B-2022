@@ -1,11 +1,14 @@
 .container{
     box-sizing: border-box;
-
-    position: absolute;
+    position:absolute;
     width: 543px;
     height: 522px;
-    left: 550px;
-    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 30%;
+    top: 10%;
 
     background: #262626;
     border: 3px solid #00D1FF;
@@ -15,7 +18,10 @@
     position: absolute;
     width: 364px;
     height: 343px;
-    left: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     top: 190px;
 }
 
@@ -81,7 +87,10 @@
     position: absolute;
     width: 190px;
     height: 72px;
-    left: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     top: 20px;
 
     font-family: 'Otomanopee One';

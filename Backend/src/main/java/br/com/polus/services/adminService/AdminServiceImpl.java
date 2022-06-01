@@ -1,4 +1,4 @@
-package br.com.polus.adminService;
+package br.com.polus.services.adminService;
 
 import br.com.polus.models.AdminUser;
 import br.com.polus.repositories.AdminRepository;

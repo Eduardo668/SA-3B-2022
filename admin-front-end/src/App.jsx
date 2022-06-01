@@ -21,19 +21,32 @@ function App() {
         body: JSON.stringify(adminUser)
       })
       
-       const verify  = await response.json();
+      const verifyAdmin  = await response.json();
 
-      setAccountVerify(verify);
-      console.log(verify)
-      if (verify == false){
+      setAccountVerify(verifyAdmin );
+
+      console.log(verifyAdmin)
+
+      if (verifyAdmin  == false){
         alert("Username or password wrong, Try again!")
+      }
+      else {
+        const adminAccontStorage = localStorage
       }
      
   }
   
   return (
   <>
-   <LoginForm verifyAccount={verifyAccountExists} />
+    {
+      !accountVerify ? ( <LoginForm verifyAccount={verifyAccountExists} />):
+      (
+        <>
+             <h1>Test</h1>       
+        </>
+      )
+    }
+  
   </>
   )
 }

@@ -1,17 +1,12 @@
 package br.com.polus.components;
 
-import br.com.polus.adminService.AdminServiceImpl;
-import br.com.polus.models.AdminUser;
-import org.mindrot.jbcrypt.BCrypt;
+import br.com.polus.services.adminService.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
-import java.util.Random;
 
 @Component
 @Transactional
